@@ -1,4 +1,10 @@
 /*Color Pallet*/
+.navigationBar ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
 /*Font Setup*/
 @font-face {
   font-family: 'fira';
@@ -9,13 +15,13 @@
 
 * {
   font-family: fira, "Arial Black", Arial;
+  background-color: #A0B3C1;
 }
 
 /*Page Setup*/
 .page {
   width: 90%;
   margin: auto;
-  background-color: #A0B3C1;
 }
 
 /*Navigation*/
@@ -26,19 +32,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
   color: #2F5D8C;
 }
 
-.navigationBar .navigationBar__link {
+.navigationBar__link {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-.navigationBar .navigationBar__link:hover {
+.navigationBar__link:hover {
   color: #D55E2D;
 }
 
@@ -58,6 +61,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 50px;
+  color: #F9F9F9;
 }
 
 /*Left Part*/
