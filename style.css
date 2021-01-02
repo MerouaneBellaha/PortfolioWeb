@@ -1,0 +1,81 @@
+
+/*Font Setup*/
+
+@font-face {
+	font-family: 'fira';
+	src: url('FiraSans-Regular.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: fira, "Arial Black", Arial;
+}
+
+/*Page Setup*/
+
+.page {
+	width: 90%;
+	margin: auto;
+}
+
+/*Navigation*/
+
+.navigationBar ul {
+	display: flex;
+	justify-content: center;
+/*	justify-content: flex-end;*/
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.navigationBar__link {
+  	color: black;
+  	text-align: center;
+ 	padding: 14px 16px;
+  	text-decoration: none;
+}
+
+.navigationBar__link:hover {
+	color: pink;
+}
+
+/*Hero Banner*/
+
+.heroBanner {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 50px;
+}
+
+	/*Left Part*/
+
+.leftCard h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+.leftCard h2 {
+	font-size: 1.5em;
+	font-weight: lighter;
+}
+
+p {
+	font-size: 1.3em;
+}
+
+	/*Right Part*/
+
+.profilPicture {
+	max-height: 20em;
+	max-width: 20em;
+	border-radius: 50%;
+	box-shadow: 0px 0px 22px gray;
+}
+
+
+
+
