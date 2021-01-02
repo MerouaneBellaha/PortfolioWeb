@@ -1,0 +1,155 @@
+// General rules
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/*Color Pallet*/
+
+$primary: #2F5D8C;
+$light: #A0B3C1;
+$accent: #D55E2D;
+$offWhite: #F9F9F9;
+
+// Mixin
+
+$box-shadow-blur: 22px;
+
+@mixin profile-picture-shadow($blur: $box-shadow-blur, $colour: $light) {
+    box-shadow: 0px 0px $blur $colour;
+}
+
+@mixin font($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+// extension 
+
+%default-ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+// mixin > extension ( no arguments / duplicated selectors )
+
+/*Font Setup*/
+
+@font-face {
+	font-family: 'fira';
+	src: url('FiraSans-Regular.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+    font-family: fira, "Arial Black", Arial;
+    background-color: $light;
+}
+
+/*Page Setup*/
+
+.page {
+	width: 90%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+/*Navigation*/
+
+.navigationBar {
+    @include font(1em, bold);
+    ul {
+        display: flex;
+        justify-content: center;
+        color: $primary;
+        @extend %default-ul;
+    }
+
+    &__link {
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        &:hover {
+            color: $accent;
+            font-weight: bold;
+        }
+    }
+}
+
+/*Hero Banner*/
+
+@mixin leftCard-buttons-appearance($background-color) {
+    width: 6em;
+    background-color: $background-color;
+    &:hover {
+        font-weight: bold;
+        @if $background-color == (#18181A) {
+            background-color: $offWhite;
+            color: $background-color;
+        } @else {
+            background-color: adjust-hue($background-color, $degrees: -20);
+        }   
+    }
+}
+
+.heroBanner {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+    margin: 5em;
+    color: $offWhite;
+
+    .leftCard {
+        width: 30%;
+        h1 {
+            @include font(2.5em, bold);
+            margin-bottom: .1em;
+        }
+        h2 {
+            @include font(1.5em, normal);
+            margin-top: 0;
+            margin-bottom: .1em;
+        }
+        p {
+            @include font(1em, normal);
+            text-align: justify;
+        }
+
+        &__links {
+        margin-top: 1em;
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        border-radius: 100px;
+        padding: 20px;
+        color: white;
+        @include font(1em, normal);
+            &--linkedIn {
+                @include leftCard-buttons-appearance(blue)
+            }
+            &--gitHub {
+                @include leftCard-buttons-appearance(#18181A)
+            }
+        }
+    }
+}
+
+
+
+p {
+	font-size: 1.3em;
+}
+
+	/*Right Part*/
+
+.profilPicture {
+	max-height: 30%;
+	max-width: 30%;
+    border-radius: 50%;
+    @include profile-picture-shadow(blue);
+}

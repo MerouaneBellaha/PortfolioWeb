@@ -1,81 +1,151 @@
+button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*Color Pallet*/
+.navigationBar ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
 
 /*Font Setup*/
-
 @font-face {
-	font-family: 'fira';
-	src: url('FiraSans-Regular.otf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'fira';
+  src: url("FiraSans-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-	font-family: fira, "Arial Black", Arial;
+  font-family: fira, "Arial Black", Arial;
+  background-color: #A0B3C1;
 }
 
 /*Page Setup*/
-
 .page {
-	width: 90%;
-	margin: auto;
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
 }
 
 /*Navigation*/
+.navigationBar {
+  font-size: 1em;
+  font-weight: bold;
+}
 
 .navigationBar ul {
-	display: flex;
-	justify-content: center;
-/*	justify-content: flex-end;*/
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #2F5D8C;
 }
 
 .navigationBar__link {
-  	color: black;
-  	text-align: center;
- 	padding: 14px 16px;
-  	text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .navigationBar__link:hover {
-	color: pink;
+  color: #D55E2D;
+  font-weight: bold;
 }
 
 /*Hero Banner*/
-
 .heroBanner {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5em;
+  color: #F9F9F9;
 }
 
-	/*Left Part*/
-
-.leftCard h1 {
-	font-size: 2.5em;
-	font-weight: bold;
+.heroBanner .leftCard {
+  width: 30%;
 }
 
-.leftCard h2 {
-	font-size: 1.5em;
-	font-weight: lighter;
+.heroBanner .leftCard h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: .1em;
+}
+
+.heroBanner .leftCard h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: .1em;
+}
+
+.heroBanner .leftCard p {
+  font-size: 1em;
+  font-weight: normal;
+  text-align: justify;
+}
+
+.heroBanner .leftCard__links {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-decoration: none;
+  border-radius: 100px;
+  padding: 20px;
+  color: white;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.heroBanner .leftCard__links--linkedIn {
+  width: 6em;
+  background-color: blue;
+}
+
+.heroBanner .leftCard__links--linkedIn:hover {
+  font-weight: bold;
+  background-color: #0055ff;
+}
+
+.heroBanner .leftCard__links--gitHub {
+  width: 6em;
+  background-color: #18181A;
+}
+
+.heroBanner .leftCard__links--gitHub:hover {
+  font-weight: bold;
+  background-color: #F9F9F9;
+  color: #18181A;
 }
 
 p {
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
 
-	/*Right Part*/
-
+/*Right Part*/
 .profilPicture {
-	max-height: 20em;
-	max-width: 20em;
-	border-radius: 50%;
-	box-shadow: 0px 0px 22px gray;
+  max-height: 30%;
+  max-width: 30%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px blue #A0B3C1;
+          box-shadow: 0px 0px blue #A0B3C1;
 }
-
-
-
-
+/*# sourceMappingURL=style.css.map */
