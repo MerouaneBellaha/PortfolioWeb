@@ -99,6 +99,17 @@
   background-color: #F9F9F9;
   color: #18181A;
 }
+@media screen and (max-width: 1290px) {
+  .heroBanner {
+    flex-direction: column;
+  }
+  .heroBanner .leftCard {
+    width: 90%;
+  }
+  .heroBanner .profilPicture {
+    display: none;
+  }
+}
 
 p {
   font-size: 1.3em;

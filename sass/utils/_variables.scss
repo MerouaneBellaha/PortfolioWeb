@@ -13,3 +13,9 @@ $font-size: (title: 2.5em, subtitle: 1.5em, p: 1em);
 
 $box-shadow-blur: 22px;
 
+// Breakpoints
+
+$breakpoints: (
+    mobile: 599px,
+    tablet: 1290px,
+)
