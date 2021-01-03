@@ -6,6 +6,8 @@
 @import "./base/base";
 
 
+//TODO: move those lines in components ? layout ? pages ?
+
 /*Navigation*/
 
 .navigationBar {
@@ -42,16 +44,16 @@
     .leftCard {
         width: 30%;
         h1 {
-            @include font(2.5em, bold);
+            @include font(map-get($font-size, title), bold);
             margin-bottom: .1em;
         }
         h2 {
-            @include font(1.5em, normal);
+            @include font(map-get($font-size, subtitle), normal);
             margin-top: 0;
             margin-bottom: .1em;
         }
         p {
-            @include font(1em, normal);
+            @include font(map-get($font-size, p), normal);
             text-align: justify;
         }
 
