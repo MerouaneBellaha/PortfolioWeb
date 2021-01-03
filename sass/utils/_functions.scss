@@ -1,0 +1,8 @@
+
+@function change-button-appearance($color) {
+    @if $color == (#18181A) {
+        @return ($offWhite, $color);
+    } @else {
+        @return (adjust-hue($color, $degrees: -20), $offWhite);
+    }   
+}

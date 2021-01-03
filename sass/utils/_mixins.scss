@@ -1,0 +1,21 @@
+
+
+@mixin profile-picture-shadow($blur: $box-shadow-blur, $colour: $light) {
+    box-shadow: 0px 0px $blur $colour;
+}
+
+@mixin font($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin leftCard-buttons-appearance($background-color) {
+    width: 6em;
+    background-color: $background-color;
+    &:hover {
+        $button-appearance: change-button-appearance($background-color);
+        font-weight: bold;
+        background-color: nth($button-appearance, 1);
+        color: nth($button-appearance, 2);
+    }
+}

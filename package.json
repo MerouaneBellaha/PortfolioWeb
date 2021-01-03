@@ -1,0 +1,19 @@
+{
+  "name": "portfolioweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MerouaneBellaha/portfiolioWeb.git"
+  },
+  "author": "Bellaha Merouane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MerouaneBellaha/portfiolioWeb/issues"
+  },
+  "homepage": "https://github.com/MerouaneBellaha/portfiolioWeb#readme"
+}
