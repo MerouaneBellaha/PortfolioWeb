@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:public/css/style.css"
+    "sass": "sass --watch ./sass/style.scss:public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,8 +13,13 @@
   },
   "author": "Bellaha Merouane",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/MerouaneBellaha/portfiolioWeb/issues"
   },
-  "homepage": "https://github.com/MerouaneBellaha/portfiolioWeb#readme"
+  "homepage": "https://github.com/MerouaneBellaha/portfiolioWeb#readme",
+  "dependencies": {
+    "fsevents": "^2.2.1",
+    "postcss-cli": "^8.3.1"
+  }
 }

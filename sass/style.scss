@@ -40,7 +40,6 @@
 	justify-content: space-between;
     margin: 5em;
     color: $offWhite;
-
     .leftCard {
         width: 30%;
         h1 {
@@ -72,6 +71,15 @@
             &--gitHub {
                 @include leftCard-buttons-appearance(#18181A)
             }
+        }
+    }
+    @include tablet-only {
+        flex-direction: column;
+        .leftCard {
+            width: 90%;
+        }
+        .profilPicture {
+            display: none;
         }
     }
 }
